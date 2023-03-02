@@ -25,6 +25,16 @@ app.patch("/:id", async (req,res)=>{
     }
     
 })
+app.get("/", async (req,res)=>{
+    try{ 
+        const user=  await User.find();
+         res.status(201).send(user)
+    }
+    catch(err){
+        res.status(500).send(err.message);
+    }
+    
+})
 app.get("/:id", async (req,res)=>{
     try{ let id = req.params.id ;
         const user=  await User.find({"_id":id});
