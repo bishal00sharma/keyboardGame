@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const userSchema= new mongoose.Schema({
-    name : {  type:String } ,
+    Name : {  type:String } ,
     level: {  type:String},
-    score: {  type:Number, default:0 }
+    score: {  type:Number }
 })
 const User = mongoose.model("user", userSchema);
 module.exports = User ;
