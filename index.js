@@ -9,7 +9,7 @@ const userRouter = require("./features/user/user.router");
 
 
 
-app.use("/api",userRouter);
+app.use("/user",userRouter);
 
 
 app.get("/", async(req, res)=>{
